@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>2026 京阪神旅遊執行手冊</title>
+    <title>2026 京阪神自由行執行手冊</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --bg: #F8F7F2; --text: #2D3436; --accent: #D63031; --trans: #0984E3; --food: #E67E22; --spot: #27AE60; }
@@ -18,15 +18,26 @@
         .card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid #ddd; }
         .card.trans { border-left-color: var(--trans); }
         .card.spot { border-left-color: var(--spot); }
-        .title { font-size: 14px; font-weight: bold; margin-bottom: 6px; display: flex; justify-content: space-between; }
+        .card.food { border-left-color: var(--food); }
+        .title { font-size: 14px; font-weight: bold; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
         .desc { font-size: 12px; color: #333; white-space: pre-wrap; line-height: 1.6; }
         .station { background: #eef2f7; color: #000; padding: 2px 6px; border-radius: 4px; font-weight: bold; border: 1px solid #d1d9e6; }
-        .badge { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 10px; color: #fff; margin-right: 4px; font-weight: bold; }
-        .bg-red { background: var(--accent); }
-        .bg-blue { background: var(--trans); }
-        .bg-green { background: #27AE60; }
-        .bg-purple { background: #9b59b6; }
-        .price { color: var(--accent); font-weight: bold; }
+        
+        /* 鐵路標誌顏色 */
+        .line-badge { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 10px; color: #fff; margin-right: 4px; font-weight: bold; }
+        .line-sanin { background: #9b59b6; } /* 山陰本線 - 紫 */
+        .line-nara { background: #D68C45; } /* 奈良線 - 橘褐 */
+        .line-midosuji { background: #D63031; } /* 御堂筋線 - 紅 */
+        .line-chuo { background: #82C91E; } /* 中央線 - 綠 */
+        .line-yotsubashi { background: #1C7ED6; } /* 四橋線 - 藍 */
+        .line-sakaisuji { background: #8B4513; } /* 堺筋線 - 褐 */
+        .line-yumesaki { background: #18317a; } /* JR 夢咲線 - 深藍 */
+        .line-osakaloop { background: #E67E22; } /* 大阪環狀線 - 橘 */
+        .line-shinkaisoku { background: #0074BE; } /* JR 新快速 - 藍 */
+        .line-bus { background: #636E72; } /* 巴士 - 灰 */
+
+        .price-twd { color: #2d3436; font-weight: bold; }
+        .price-jpy { color: #d63031; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -34,95 +45,91 @@
     <div id="itinerary" class="page active">
         <div class="day-header">D1 02/13 (五) 桃園 ➔ 京都</div>
         <div class="card trans">
-            <div class="title">家 ➔ 羅東 ➔ 桃園 T2</div>
-            <div class="desc">計程車 (30分) ➔ 羅東轉運站 (噶瑪蘭 150y) ➔ 台北車站 (機捷 160y)</div>
+            <div class="title">出發接駁 <span class="price-twd">150 + 160</span></div>
+            <div class="desc">計程車 (30分) ➔ 羅東轉運站 (噶瑪蘭) ➔ 台北車站 (機捷) ➔ 桃園 T2</div>
         </div>
         <div class="card trans">
-            <div class="title">JR HARUKA (80分鐘)</div>
-            <div class="desc"><span class="station">關西機場 T1</span> ➔ <span class="station">京都車站</span> ➔ 走路 (10分) ➔ Stay SAKURA</div>
+            <div class="title">長榮航空 BR130 <span class="price-twd">來回 22,474</span></div>
+            <div class="desc">13:20 - 16:45 | 桃園 T2 ➔ 關西 T1 (行李 2PC)</div>
         </div>
-
-        <div class="day-header">D3 02/15 (日) 海之京都 (伊根)</div>
-        <div class="card trans">
-            <div class="title">去程精確接駁</div>
-            <div class="desc">
-1. 07:15 - 09:13 <span class="station">京都站</span> ➔ <span class="station">福知山</span> (JR 特急 Hashidate)
-2. 09:30 抵達 <span class="station">西舞鶴</span> (丹後鐵道)
-3. 10:13 - 11:01 <span class="badge bg-purple">丹後赤松號</span> ➔ <span class="station">天橋立</span>
-4. 11:25 / 12:49 <span class="badge bg-blue">丹海巴士</span> ➔ <span class="station">伊根</span></div>
-        </div>
-        <div class="card spot">
-            <div class="title">伊根回程</div>
-            <div class="desc">17:56 <span class="station">伊根浦公園</span> ➔ <span class="station">天橋立站</span> ➔ 19:05 JR 橋立號最末班回京都</div>
+        <div class="card hotel">
+            <div class="title">Stay SAKURA 京都祭 <span class="price-twd">3,721</span></div>
+            <div class="desc">HARUKA 抵達京都站後，走路 10 分鐘入住。</div>
         </div>
 
         <div class="day-header">D4 02/16 (一) 嵐山巡禮</div>
         <div class="card trans">
-            <div class="title">京都車站 ➔ JR 嵯峨嵐山站 <span class="price">240y</span></div>
-            <div class="desc">● <span class="badge bg-purple">山陰本線</span> (20 分鐘) ➔ 下車走路 10 分鐘至和服店</div>
+            <div class="title">京都 ➔ 嵐山 <span class="price-jpy">240y</span></div>
+            <div class="desc">● <span class="station">京都車站 (JR 31-33 月台)</span> <br>● <span class="line-badge line-sanin">山陰本線</span> (20 分鐘) ➔ 走路 10 分鐘至和服店</div>
         </div>
         <div class="card spot">
-            <div class="title">嵐山行程細節</div>
-            <div class="desc">
-● 竹林大道 / 御髮神社 (走路 1 小時) ➔ 野宮神社
-● 嵐山大街 + 度月橋 (午餐) ➔ 天龍寺 (1 小時)
-● <span class="station">JR 嵯峨嵐山站</span> ➔ <span class="badge bg-purple">山陰本線</span> (20 分鐘) ➔ 京都車站</div>
+            <div class="title">景點與午餐</div>
+            <div class="desc">1. 嵯峨野觀光鐵道 ➔ 竹林大道/御髮神社 (1h) ➔ 渡月橋 (吃午餐) <br>2. 天龍寺 (1h) ➔ 下午茶 / 逛街</div>
         </div>
 
         <div class="day-header">D5 02/17 (二) 宇治 & 下鴨神社</div>
         <div class="card trans">
-            <div class="title">京都 ➔ 宇治 ➔ 下鴨轉乘</div>
+            <div class="title">關鍵轉乘路徑</div>
             <div class="desc">
-1. <span class="station">京都站</span> ➔ <span class="badge bg-blue">奈良線</span> (普通奈良) (47 分鐘) ➔ <span class="station">宇治站</span>
-2. <span class="station">宇治</span> ➔ <span class="badge bg-blue">奈良線普通京都</span> ➔ <span class="station">京都站</span>
-3. <span class="station">七條堀站</span> ➔ <span class="badge bg-red">205 City Bus</span> (1 小時) ➔ <span class="station">葵橋</span> (下鴨神社)</div>
+1. <span class="station">京都站</span> ➔ (<span class="line-badge line-nara">奈良線</span> 普通) ➔ <span class="station">宇治站</span> (47 分鐘)
+2. 平等院 ➔ 抹茶一條街 (吃午餐)
+3. <span class="station">宇治</span> ➔ (<span class="line-badge line-nara">奈良線</span> 普通) ➔ <span class="station">京都站</span>
+4. <span class="station">七條堀站</span> ➔ (<span class="line-badge line-bus">205 City Bus</span>) ➔ <span class="station">葵橋</span> (**1 小時**) ➔ **下鴨神社**</div>
         </div>
 
-        <div class="day-header">D8 02/20 (五) 勝尾寺細節</div>
-        <div class="card trans">
-            <div class="title">去程：松屋町 ➔ 勝尾寺</div>
-            <div class="desc">
-1. <span class="station">松屋町站</span> (<span class="badge bg-green">長堀鶴見綠地線</span>) ➔ <span class="station">心齋橋站</span>
-2. <span class="station">心齋橋站</span> ➔ <span class="station">箕面萱野</span> (<span class="badge bg-red">御堂筋線</span> / **北大阪急行線**)
-3. **公車站 8 號月台** ➔ **30 號公車** 直達勝尾寺 (22 分鐘)</div>
-        </div>
-        <div class="card trans">
-            <div class="title">回程：勝尾寺 ➔ 日本橋</div>
-            <div class="desc">
-1. **30 號公車** (20 分鐘) ➔ <span class="station">箕面萱野</span>
-2. <span class="station">難波站</span> (<span class="badge bg-red">御堂筋線</span>) (30 分鐘) ➔ 走路 15 分鐘 ➔ 日本橋</div>
-        </div>
-
-        <div class="day-header">D9 02/21 (六) 大阪市區巡禮</div>
-        <div class="card trans">
-            <div class="title">松屋町 ➔ 大阪城</div>
-            <div class="desc">● <span class="station">長堀橋</span> (<span class="badge bg-purple">堺筋線</span>) ➔ <span class="station">堺筋本町</span> (<span class="badge bg-green">中央線</span>) ➔ <span class="station">谷町四丁目站</span> (走路 15-20 分)</div>
-        </div>
+        <div class="day-header">D6 02/18 (三) 梅田全攻略</div>
         <div class="card spot">
-            <div class="title">大阪城 ➔ 難波八阪神社</div>
+            <div class="title">購物與小店清單</div>
             <div class="desc">
-1. <span class="station">谷町四丁目站</span> (<span class="badge bg-green">中央線</span>) ➔ <span class="station">本町站</span>
-2. <span class="station">本町站</span> (<span class="badge bg-blue">四橋線</span>) ➔ <span class="station">難波站</span> (**出站口 32**)
-3. 難波八阪神社 ➔ 道具屋筋 ➔ 日本橋 ➔ 黑門市場</div>
+1. 阪神梅田總店 (**LOFT**)
+2. **HEP FIVE** (萬代扭蛋店 / 拍貼機 / 我英咖啡店)
+3. **LUCUA** (湯姆貓 / 橡子共和國) ➔ 我英快閃店</div>
+        </div>
+        <div class="card food">
+            <div class="title">午晚餐選項</div>
+            <div class="desc"><span class="badge bg-red">食</span> 印度餐廳 / TACO BELL / 天婦羅</div>
+        </div>
+
+        <div class="day-header">D7 02/19 (四) 環球影城</div>
+        <div class="card trans">
+            <div class="title">松屋町 ➔ 環球影城 <span class="price-twd">門票 2,205</span></div>
+            <div class="desc">
+1. <span class="station">松屋町站</span> (<span class="line-badge line-chuo" style="background:#82C91E">長堀鶴見綠地線</span>) ➔ <span class="station">大正</span>
+2. <span class="station">大正站</span> (<span class="line-badge line-osakaloop">大阪環狀線</span>) ➔ <span class="station">西九條車站</span>
+3. <span class="station">西九條車站</span> (<span class="line-badge line-yumesaki">JR 夢咲線</span>) ➔ <span class="station">環球影城站</span></div>
+        </div>
+
+        <div class="day-header">D8 02/20 (五) 勝尾寺</div>
+        <div class="card trans">
+            <div class="title">交通月台標註</div>
+            <div class="desc">
+1. <span class="station">心齋橋站</span> (<span class="line-badge line-midosuji">御堂筋線</span>) ➔ <span class="station">箕面萱野</span>
+2. **公車站 8 號月台** ➔ (<span class="line-badge line-bus">30 號公車</span>) ➔ **勝尾寺** (22 分鐘)</div>
+        </div>
+
+        <div class="day-header">D9 02/21 (六) 大阪城與午餐</div>
+        <div class="card food">
+            <div class="title">午餐精確選項</div>
+            <div class="desc">
+1. **Kiyosuke (壽喜燒)**
+2. **大起水產 (迴轉壽司)** (大阪城旁，不可預約)
+3. **Taimatsu Sushi & Tempura** (難波)</div>
+        </div>
+        <div class="card trans">
+            <div class="title">去難波八阪神社</div>
+            <div class="desc">● <span class="station">本町站</span> (<span class="line-badge line-yotsubashi">四橋線</span>) ➔ <span class="station">難波站</span> (**出站口 32**)</div>
         </div>
 
         <div class="day-header">D12 02/24 (二) 姬路城</div>
         <div class="card trans">
-            <div class="title">神戶 ➔ 姬路 <span class="price">990y</span></div>
-            <div class="desc">● <span class="station">JR 三宮站</span> ➔ <span class="badge bg-blue">東海道、山陽本線新快速</span> (40 分) ➔ <span class="station">姬路</span> (1 小時+走路 20 分)</div>
+            <div class="title">神戶 ➔ 姬路 <span class="price-jpy">990y</span></div>
+            <div class="desc">● <span class="station">JR 三宮站</span> ➔ (<span class="line-badge line-shinkaisoku">東海道、山陽本線</span>) ➔ <span class="station">姬路</span> (1h + 走路 20m) <br>● <span class="price-jpy">門票 1050y</span></div>
         </div>
-        <div class="card trans">
-            <div class="title">姬路 ➔ 花園町夢旅人</div>
-            <div class="desc">● <span class="station">姬路</span> ➔ <span class="badge bg-blue">JR 線</span> ➔ <span class="station">大阪車站</span> ➔ 轉 **西梅田車站** ➔ <span class="badge bg-blue">四橋線</span> ➔ **花園町**</div>
-        </div>
-
-        <div class="day-header">D13 02/25 (三) 歸途</div>
-        <div class="card trans">
-            <div class="title">花園町 ➔ 臨空城 ➔ 機場</div>
+        <div class="card hotel">
+            <div class="title">花園町夢旅人 <span class="price-twd">3,211</span></div>
             <div class="desc">
-1. <span class="station">天下茶屋</span> ➔ <span class="badge bg-blue">南海本線</span> ➔ <span class="station">臨空城</span> (40 分鐘 / 780y)
-2. <span class="station">臨空城</span> ➔ <span class="badge bg-purple">南海機場線</span> ➔ <span class="station">關西機場 T1</span> (5 分鐘 / 370y)
-<span class="badge bg-red">警告</span> BR129 (18:00) | 行李限 1PC！</div>
+1. <span class="station">姬路</span> ➔ (<span class="line-badge line-shinkaisoku">東海道、山陽本線</span>) ➔ <span class="station">大阪車站</span>
+2. **轉至西梅田車站** ➔ (<span class="line-badge line-yotsubashi">四橋線</span>) ➔ <span class="station">花園町站</span> (1.5h)</div>
         </div>
     </div>
 
