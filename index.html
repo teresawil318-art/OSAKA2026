@@ -3,93 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>2026 京阪神之旅</title>
+    <title>2026 京阪神之旅 (完整版)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --bg: #F8F7F2; --text: #2D3436; --accent: #D63031; --trans: #0984E3; --food: #E67E22; --spot: #27AE60; --hotel: #636E72; }
-        body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 80px; }
+        body { font-family: -apple-system, "PingFang TC", sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 80px; line-height: 1.5; }
         .nav-bar { position: fixed; bottom: 0; width: 100%; background: #fff; display: flex; justify-content: space-around; padding: 12px 0; box-shadow: 0 -3px 10px rgba(0,0,0,0.1); z-index: 1000; }
         .nav-item { font-size: 11px; color: #A0A0A0; text-align: center; text-decoration: none; flex: 1; }
         .nav-item.active { color: var(--accent); }
         .nav-item i { font-size: 20px; display: block; margin-bottom: 4px; }
         .page { display: none; padding: 15px; }
         .page.active { display: block; }
-        .day-header { sticky; top: 0; background: var(--bg); padding: 10px 0; border-bottom: 2px solid var(--accent); margin-bottom: 15px; font-weight: bold; }
-        .card { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid #ddd; }
+        .day-header { position: sticky; top: 0; background: var(--bg); padding: 10px 0; border-bottom: 2px solid var(--accent); margin: 20px 0 10px 0; font-weight: bold; z-index: 10; display: flex; justify-content: space-between; }
+        .card { background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 5px solid #ddd; }
         .card.trans { border-left-color: var(--trans); }
         .card.spot { border-left-color: var(--spot); }
         .card.food { border-left-color: var(--food); }
-        .card.hotel { border-left-color: var(--hotel); background: #f9f9f9; }
-        .time { font-size: 11px; color: #999; font-weight: bold; }
-        .title { font-size: 15px; font-weight: bold; margin: 3px 0; }
-        .desc { font-size: 13px; color: #555; white-space: pre-wrap; }
-        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; color: #fff; margin-right: 4px; font-weight: bold; }
+        .card.hotel { border-left-color: var(--hotel); background: #fdfdfd; }
+        .title { font-size: 14px; font-weight: bold; margin: 2px 0; }
+        .desc { font-size: 12px; color: #555; white-space: pre-wrap; }
+        .badge { display: inline-block; padding: 1px 5px; border-radius: 4px; font-size: 10px; color: #fff; margin-right: 4px; }
         .bg-red { background: var(--accent); }
         .bg-blue { background: var(--trans); }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
-        td { padding: 8px; border-bottom: 1px solid #eee; }
-        .price { color: var(--accent); font-weight: bold; text-align: right; }
     </style>
 </head>
 <body>
 
     <div id="itinerary" class="page active">
-        <div class="day-header">D1 02/13 (五) 桃園 ➔ 京都</div>
-        <div class="card trans">
-            <div class="time">13:20 - 16:45</div>
-            <div class="title">BR130 長榮航空</div>
-            <div class="desc">桃園機場 T2 ➔ 關西機場 T1 </div>
-        </div>
-        <div class="card hotel">
-            <div class="title">Stay SAKURA Kyoto Matsuri</div>
-            <div class="desc">住宿費: 3,721 TWD </div>
-        </div>
+        <div class="day-header"><span>D1 02/13 (五) 台灣 ➔ 京都</span></div>
+        <div class="card trans"><div class="title">羅東 ➔ 桃園機場</div><div class="desc">噶瑪蘭(150y) ➔ 機捷(160y)</div></div>
+        <div class="card trans"><div class="title">長榮航空 BR130</div><div class="desc">13:20-16:45 | T2 ➔ 關西機場 T1</div></div>
+        <div class="card trans"><div class="title">JR HARUKA</div><div class="desc">關西機場 ➔ 京都車站 (80分鐘)</div></div>
+        <div class="card hotel"><div class="title">Stay SAKURA Kyoto Matsuri</div><div class="desc">住宿: 3721 TWD / 15432 JPY</div></div>
 
-        <div class="day-header">D3 02/15 (日) 伊根舟屋行動</div>
-        <div class="card spot">
-            <div class="title">伊根 & 天橋立</div>
-            <div class="desc">
-<span class="badge bg-blue">交通</span> 丹後赤松號 (10:13-11:01) [cite: 14]
-<span class="badge bg-red">必買</span> 向井造酒：京之春 [cite: 22]
-<span class="badge bg-red">必吃</span> 北野商店：魚乾條 [cite: 23]
-            </div>
-        </div>
+        <div class="day-header"><span>D2 02/14 (六) 京都經典</span></div>
+        <div class="card spot"><div class="title">清水寺 ➔ 伏見稻荷 ➔ 八坂神社</div><div class="desc"><span class="badge bg-red">食</span> 七條-伏見稻荷站間吃午餐</div></div>
 
-        <div class="day-header">D10 02/22 (日) 甲子園巡禮</div>
-        <div class="card spot">
-            <div class="title">甲子園歷史館</div>
-            <div class="desc"><span class="badge bg-red">重要</span> 10:15 報到，10:30 導覽 </div>
-        </div>
+        <div class="day-header"><span>D3 02/15 (日) 海之京都 (伊根)</span></div>
+        <div class="card trans"><div class="title">京都 ➔ 福知山 ➔ 天橋立</div><div class="desc">JR 特急 ➔ 丹後鐵道</div></div>
+        <div class="card trans"><div class="title">丹後赤松號</div><div class="desc">10:13 - 11:01 (需劃位)</div></div>
+        <div class="card spot"><div class="title">伊根舟屋</div><div class="desc"><span class="badge bg-red">必買</span> 向井造酒(京之春)、北野商店(魚乾)</div></div>
 
-        <div class="day-header">D12 02/24 (二) 姬路城</div>
-        <div class="card spot">
-            <div class="title">國寶姬路城</div>
-            <div class="desc">門票: 1050 JPY 
-<span class="badge bg-red">晚餐</span> 天晴水產 (KIRIN) </div>
-        </div>
+        <div class="day-header"><span>D4 02/16 (一) 嵐山雪景</span></div>
+        <div class="card spot"><div class="title">嵐山竹林 ➔ 金閣寺 ➔ 錦市場</div></div>
+        <div class="day-header"><span>D5 02/17 (二) 宇治人文</span></div>
+        <div class="card spot"><div class="title">宇治 ➔ 源氏物語 ➔ 平等院</div></div>
+
+        <div class="day-header"><span>D6 02/18 (三) 京都 ➔ 大阪</span></div>
+        <div class="card hotel"><div class="title">大阪住宿 (心齋橋/難波)</div></div>
+        <div class="day-header"><span>D7 02/19 (四) 環球影城</span></div>
+        <div class="card spot"><div class="title">USJ 一整天</div><div class="desc">門票: 2205 TWD</div></div>
+        <div class="day-header"><span>D8 02/20 (五) 勝尾寺</span></div>
+        <div class="card trans"><div class="title">千里中央 ➔ 30號巴士</div><div class="desc">前往「勝運之寺」求不倒翁</div></div>
+        <div class="day-header"><span>D9 02/21 (六) 大阪市區</span></div>
+        <div class="card spot"><div class="title">日本橋 ➔ 黑門市場</div></div>
+
+        <div class="day-header"><span>D10 02/22 (日) 甲子園</span></div>
+        <div class="card spot"><div class="title">甲子園歷史館</div><div class="desc"><span class="badge bg-red">預約</span> 10:15 到達 / 10:30 開始導覽</div></div>
+        <div class="day-header"><span>D11 02/23 (一) 神戶 & 有馬</span></div>
+        <div class="card spot"><div class="title">北野天滿神社(馬御守) ➔ 有馬溫泉</div></div>
+        <div class="day-header"><span>D12 02/24 (二) 姬路城</span></div>
+        <div class="card spot"><div class="title">國寶姬路城 (1050y)</div><div class="desc"><span class="badge bg-red">食</span> 晚餐: 天晴水產 (KIRIN)</div></div>
+        <div class="day-header"><span>D13 02/25 (三) 歸途</span></div>
+        <div class="card trans"><div class="title">長榮航空 BR129</div><div class="desc">18:00 - 20:15 | <span class="badge bg-red">注意</span> 行李僅 1PC</div></div>
     </div>
 
     <div id="info" class="page">
-        <div class="day-header">重要交通 & 住宿</div>
-        <div class="card">
-            <div class="title">航班詳情</div>
-            <table>
-                <tr><td>去程 BR130</td><td>13:20 (行李 2PC) </td></tr>
-                <tr><td>回程 BR129</td><td class="price">18:00 (行李 1PC!) </td></tr>
-            </table>
-        </div>
-        <div class="card">
-            <div class="title">住宿清單 [cite: 31]</div>
-            <table>
-                <tr><td>2/13-18</td><td>Stay SAKURA 京都祭 [cite: 32, 33]</td></tr>
-                <tr><td>2/18-23</td><td>大阪 グ蘭夏吉 [cite: 34, 35]</td></tr>
-                <tr><td>2/23-24</td><td>SK HOTEL 神戶站前 [cite: 36]</td></tr>
-            </table>
-        </div>
+        <div class="day-header"><span>綜合資訊</span></div>
+        <div class="card"><div class="title">總花費概算 (TWD)</div><div class="desc">機票: 22,474<br>USJ: 2,205<br>京都宿: 3,721</div></div>
+        <div class="card"><div class="title">緊急聯絡</div><div class="desc">駐日代表處: +81-3-3280-7811</div></div>
     </div>
 
     <nav class="nav-bar">
-        <a href="javascript:void(0)" class="nav-item active" onclick="showPage('itinerary', this)"><i class="fas fa-map-marked-alt"></i>行程</a>
+        <a href="javascript:void(0)" class="nav-item active" onclick="showPage('itinerary', this)"><i class="fas fa-calendar-day"></i>行程</a>
         <a href="javascript:void(0)" class="nav-item" onclick="showPage('info', this)"><i class="fas fa-info-circle"></i>資訊</a>
     </nav>
 
