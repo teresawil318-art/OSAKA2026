@@ -3,211 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>2026 京阪神自由行手冊</title>
+    <title>2026 京阪神自由行手冊 FINAL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --accent: #D63031; --bg: #F8F7F2; --trans: #0984E3; --stay: #6C5CE7; }
-        body { font-family: -apple-system, "PingFang TC", sans-serif; background: var(--bg); margin: 0; padding-bottom: 20px; line-height: 1.5; }
-        .day-box { background: #fff; margin: 12px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
-        .day-title { background: var(--accent); color: #fff; padding: 10px 15px; font-weight: bold; font-size: 16px; }
-        .content { padding: 5px 15px; }
-        .row { border-bottom: 1px solid #eee; padding: 10px 0; }
-        .row:last-child { border-bottom: none; }
-        .loc { font-weight: bold; font-size: 15px; display: block; }
-        .detail { font-size: 13px; color: #555; margin-top: 3px; }
-        .note { font-size: 12px; color: #D63031; background: #FFF5F5; padding: 6px; border-radius: 4px; margin-top: 5px; }
-        .price { color: #D63031; font-weight: bold; float: right; font-size: 12px; }
+        :root { --bg: #F8F7F2; --text: #2D3436; --accent: #D63031; --trans: #0984E3; --food: #E67E22; --spot: #27AE60; }
+        body { font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif; background: var(--bg); color: var(--text); margin: 0; padding-bottom: 30px; line-height: 1.5; }
+        .day-card { background: #fff; margin: 15px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); overflow: hidden; border-top: 5px solid var(--accent); }
+        .day-header { background: #fdfdfd; padding: 12px 15px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; color: var(--accent); }
+        .content { padding: 10px 15px; }
+        .item { padding: 8px 0; border-bottom: 1px dotted #eee; }
+        .item:last-child { border-bottom: none; }
+        .title { font-weight: bold; font-size: 14px; display: block; margin-bottom: 3px; }
+        .desc { font-size: 12px; color: #555; }
+        .note { font-size: 11px; color: var(--accent); background: #FFF5F5; padding: 5px; border-radius: 4px; margin-top: 5px; }
+        .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; color: #fff; margin-right: 5px; font-weight: bold; vertical-align: middle; }
+        .b-jr { background: #27AE60; } .b-bus { background: #636E72; } .b-sub { background: #0084ff; }
+        .price { float: right; color: var(--accent); font-weight: bold; font-size: 11px; }
     </style>
 </head>
 <body>
 
-    <div class="day-box">
-        <div class="day-title">2/13 (五) 桃園 ➔ 京都</div>
+    <div class="day-card">
+        <div class="day-header"><span>D1 02/13 (五)</span> <span>桃園 ➔ 京都</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">家 ➔ 羅東 ➔ 桃園 T2</span>
-                <span class="detail">噶瑪蘭 (150/1) + 機捷 (160/1)</span>
-            </div>
-            <div class="row">
-                <span class="loc">長榮航空 BR130</span>
-                <span class="price">13:20-16:45</span>
-                <span class="detail">關西機場 ➔ 京都車站 (HARUKA 80分鐘)</span>
-            </div>
-            <div class="row">
-                <span class="loc">住宿：Stay SAKURA Kyoto Matsuri</span>
-                <span class="detail">下車後走路 10 分鐘</span>
-            </div>
+            <div class="item"><span class="title">家 ➔ 羅東 ➔ 桃園 T2</span><span class="desc">噶瑪蘭(150) + 機捷(160)</span></div>
+            <div class="item"><span class="title">長榮 BR130 <span class="price">13:20-16:45</span></span><span class="desc">關西機場 ➔ 京都車站 (HARUKA 80min)</span></div>
+            <div class="item"><span class="title">住宿：Stay SAKURA 京都祭</span><span class="desc">京都站下車走路 10 分鐘</span></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/14 (六) 京都古蹟</div>
+    <div class="day-card">
+        <div class="day-header"><span>D2 02/14 (六)</span> <span>京都古蹟</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">清水寺</span>
-                <span class="detail">公車 206 City Bus (30分鐘)</span>
-            </div>
-            <div class="row">
-                <span class="loc">伏見稻荷神社</span>
-                <span class="detail">206 Bus 轉京阪本線 (40分鐘)</span>
-                <div class="note">七條站-伏見稻禾站 / 先吃午餐</div>
-            </div>
-            <div class="row">
-                <span class="loc">八坂神社</span>
-                <span class="detail">京阪本線 (25分鐘) ➔ 祗園四條</span>
-                <div class="note">逛完吃晚餐</div>
-            </div>
+            <div class="item"><span class="title">清水寺</span><span class="desc"><span class="badge b-bus">206 Bus</span> (30min)</span></div>
+            <div class="item"><span class="title">伏見稻禾神社</span><span class="desc">206 Bus 轉 <span class="badge b-sub">京阪本線</span></span><div class="note">七條站-伏見稻禾站 / 先吃午餐</div></div>
+            <div class="item"><span class="title">八坂神社</span><span class="desc"><span class="badge b-sub">京阪本線</span> (25min) ➔ 祗園四條</span><div class="note">逛完吃晚餐</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/15 (日) 伊根舟屋</div>
+    <div class="day-card">
+        <div class="day-header"><span>D3 02/15 (日)</span> <span>伊根舟屋</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">京都 ➔ 西舞鶴 ➔ 天橋立</span>
-                <span class="detail">JR特急 (07:15-09:13) ➔ 丹後赤松號 (10:13)</span>
-            </div>
-            <div class="row">
-                <span class="loc">伊根舟屋</span>
-                <span class="detail">巴士往返、觀光船、向井造酒、舟屋咖啡</span>
-                <div class="note">末班回天橋立巴士 17:56 / 跟海鷗打架</div>
-            </div>
+            <div class="item"><span class="title">京都 ➔ 西舞鶴 ➔ 天橋立</span><span class="desc">JR特急 (07:15-09:13) ➔ <span class="badge b-jr">赤松號</span> (10:13)</span></div>
+            <div class="item"><span class="title">伊根舟屋巡禮</span><div class="note">末班回天橋立巴士 17:56 / 跟海鷗打架 / 向井造酒</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/16 (一) 嵐山</div>
+    <div class="day-card">
+        <div class="day-header"><span>D4 02/16 (一)</span> <span>嵐山</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">JR 嵯峨嵐山站</span>
-                <span class="detail">山陰本線 (20分鐘) / 車資 240y</span>
-                <div class="note">雪大取消和服 / 竹林、御髮神社、渡月橋、天龍寺</div>
-            </div>
+            <div class="item"><span class="title">JR 嵯峨嵐山站</span><span class="desc"><span class="badge b-jr">山陰本線</span> (20min) / 240y</span><div class="note">雪大取消和服 / 竹林、御髮神社、天龍寺</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/17 (二) 宇治 & 下鴨</div>
+    <div class="day-card">
+        <div class="day-header"><span>D5 02/17 (二)</span> <span>宇治 & 下鴨</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">宇治</span>
-                <span class="detail">JR 奈良線 (47分鐘) ➔ 抹茶一條街</span>
-            </div>
-            <div class="row">
-                <span class="loc">下鴨神社</span>
-                <span class="detail">京都站轉 205 Bus (1小時) ➔ 葵橋</span>
-                <div class="note">鳥羽御守</div>
-            </div>
+            <div class="item"><span class="title">宇治 ➔ 抹茶街</span><span class="desc">JR奈良線 (47min) / 兔子神社</span></div>
+            <div class="item"><span class="title">下鴨神社</span><span class="desc">京都站轉 <span class="badge b-bus">205 Bus</span> ➔ 葵橋</span><div class="note">鳥羽御守</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/18 (三) 梅田逛街 (移住大阪)</div>
+    <div class="day-card">
+        <div class="day-header"><span>D6 02/18 (三)</span> <span>梅田購物 (移大阪)</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">住宿：大阪グランシャーギ</span>
-                <span class="detail">JR新快速 ➔ 大阪 ➔ 谷町線/長堀鶴見綠地線</span>
-            </div>
-            <div class="row">
-                <span class="loc">梅田購物</span>
-                <span class="detail">阪神梅田 (LOFT) / HEP FIVE / LUCUA</span>
-            </div>
+            <div class="item"><span class="title">京都 ➔ 梅田</span><span class="desc">HARUKA (40min) / 1870y</span></div>
+            <div class="item"><span class="title">購物：LOFT / HEP FIVE</span><span class="desc">住宿：グランシャーギ (心齋橋站)</span></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/19 (四) 環球影城</div>
+    <div class="day-card">
+        <div class="day-header"><span>D7 02/19 (四)</span> <span>環球影城</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">USJ 全日</span>
-                <span class="detail">松屋町 ➔ 大正 ➔ 西九條 ➔ 環球影城</span>
-            </div>
+            <div class="item"><span class="title">USJ 全日</span><span class="desc">松屋町 ➔ 大正 ➔ 西九條 ➔ USJ</span></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/20 (五) 勝尾寺</div>
+    <div class="day-card">
+        <div class="day-header"><span>D8 02/20 (五)</span> <span>勝尾寺</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">勝尾寺</span>
-                <span class="detail">御堂筋線 ➔ 箕面萱野 ➔ 30號巴士</span>
-                <div class="note">箕面萱野站 8 號月台搭乘</div>
-            </div>
+            <div class="item"><span class="title">松屋町 ➔ 勝尾寺</span><span class="desc">御堂筋線 ➔ 箕面萱野 ➔ <span class="badge b-bus">30號公車</span></span><div class="note">8號月台搭乘 / 日本橋宅宅行程</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/21 (六) 大阪市區</div>
+    <div class="day-card">
+        <div class="day-header"><span>D9 02/21 (六)</span> <span>大阪市區</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">大阪城 ➔ 難波 ➔ 黑門市場</span>
-                <div class="note">午餐：大起水產 / 晚餐：蕎麥麵 Namiichi</div>
-            </div>
+            <div class="item"><span class="title">大阪城 ➔ 難波 ➔ 黑門市場</span><div class="note">大起水產 / 蕎麥麵 Namiichi 晚餐</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/22 (日) 甲子園</div>
+    <div class="day-card">
+        <div class="day-header"><span>D10 02/22 (日)</span> <span>甲子園</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">甲子園球場參觀</span>
-                <span class="detail">近鐵日本橋 ➔ 阪神線 (約 50分鐘)</span>
-                <div class="note">參觀時間 10:30 (提前 15 分報到)</div>
-            </div>
-            <div class="row">
-                <span class="loc">梅田逛街</span>
-                <div class="note">晚餐：Shake Shack 或 Taco Bell</div>
-            </div>
+            <div class="item"><span class="title">甲子園歷史館</span><span class="desc">近鐵日本橋 ➔ 阪神線</span><div class="note">10:30 報到參觀 / 晚餐 Shake Shack</div></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/23 (一) 神戶 (移住神戶)</div>
+    <div class="day-card">
+        <div class="day-header"><span>D11 02/23 (一)</span> <span>神戶 (移住)</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">神戶市內 (City Loop)</span>
-                <span class="detail">異人館、星巴克、北野天滿神社、美利堅公園</span>
-                <div class="note">一日券 800y / 往北 7 往南 13</div>
-            </div>
-            <div class="row">
-                <span class="loc">有馬溫泉</span>
-                <span class="detail">JR 高速巴士 (780y)</span>
-            </div>
-            <div class="row">
-                <span class="loc">住宿：SK HOTEL 神戶駅前</span>
-            </div>
+            <div class="item"><span class="title">City Loop 一日遊</span><span class="desc">異人館、馬御守 / 800y</span></div>
+            <div class="item"><span class="title">有馬溫泉</span><span class="desc">JR 高速巴士 (780y) / 住宿：SK HOTEL</span></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/24 (二) 姬路城 ➔ 花園町</div>
+    <div class="day-card">
+        <div class="day-header"><span>D12 02/24 (二)</span> <span>姬路城 ➔ 花園町</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">姬路城 / 好古園</span>
-                <span class="detail">JR 三宮 ➔ 姬路 (1小時)</span>
-                <div class="note">晚餐：天晴水產</div>
-            </div>
-            <div class="row">
-                <span class="loc">移動至花園町</span>
-                <span class="detail">大阪站轉西梅田 (四橋線)</span>
-                <div class="note">住宿：花園町の夢旅人</div>
-            </div>
+            <div class="item"><span class="title">姬路城 / 好古園</span><span class="desc">JR三宮 ➔ 姬路 / 天晴水產晚餐</span></div>
+            <div class="item"><span class="title">住宿：花園町の夢旅人</span><span class="desc">大阪站轉西梅田 (四橋線)</span></div>
         </div>
     </div>
 
-    <div class="day-box">
-        <div class="day-title">2/25 (三) 歸途</div>
+    <div class="day-card">
+        <div class="day-header"><span>D13 02/25 (三)</span> <span>臨空城 ➔ 桃園</span></div>
         <div class="content">
-            <div class="row">
-                <span class="loc">臨空城 (Rinku Town)</span>
-                <span class="detail">天下茶屋搭南海本線 (780y)</span>
-                <div class="note">15:00 前離開</div>
-            </div>
-            <div class="row">
-                <span class="loc">長榮航空 BR129</span>
-                <span class="price">18:00-20:15</span>
-                <div class="note">行李限 1PC / 關西機場 T1</div>
-            </div>
+            <div class="item"><span class="title">臨空城 Rinku Town</span><span class="desc">南海本線 (780y) / 15:00前離開</span></div>
+            <div class="item"><span class="title">長榮 BR129 <span class="price">18:00-20:15</span></span><span class="desc">關西機場 T1 / 行李 1PC</span></div>
         </div>
     </div>
 
